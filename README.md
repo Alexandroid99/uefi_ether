@@ -22,6 +22,6 @@ create_device /path/to/boot.img
 
 lunch
 
-make -jX lk
+make -j1 lk
 
-finalize_device device/[VENDOR]/[CODENAME]
+finalize_device device/nextbit/ether
