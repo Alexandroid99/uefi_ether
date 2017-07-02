@@ -1,0 +1,167 @@
+fastboot -i 0x2c3f oem dump-partitiontable
+...
+(bootloader) hd1(<null>) sz:31268536320 bsz:512 ref:54 sub:0
+(bootloader) hd1p1(pmic) sz:131072 bsz:512 ref:3 sub:1
+(bootloader) hd1p2(pmicbak) sz:131072 bsz:512 ref:3 sub:1
+(bootloader) hd1p3(sbl1) sz:1048576 bsz:512 ref:3 sub:1
+(bootloader) hd1p4(sbl1bak) sz:1048576 bsz:512 ref:3 sub:1
+(bootloader) hd1p5(aboot) sz:1048576 bsz:512 ref:3 sub:1
+(bootloader) hd1p6(abootbak) sz:1048576 bsz:512 ref:3 sub:1
+(bootloader) hd1p7(rpm) sz:512000 bsz:512 ref:3 sub:1
+(bootloader) hd1p8(rpmbak) sz:512000 bsz:512 ref:3 sub:1
+(bootloader) hd1p9(tz) sz:1048576 bsz:512 ref:3 sub:1
+(bootloader) hd1p10(tzbak) sz:1048576 bsz:512 ref:3 sub:1
+(bootloader) hd1p11(hyp) sz:524288 bsz:512 ref:3 sub:1
+(bootloader) hd1p12(hypbak) sz:524288 bsz:512 ref:3 sub:1
+(bootloader) hd1p13(DDR) sz:1048576 bsz:512 ref:3 sub:1
+(bootloader) hd1p14(hwcfg) sz:32768 bsz:512 ref:3 sub:1
+(bootloader) hd1p15(deviceinfo) sz:1048576 bsz:512 ref:3 sub:1
+(bootloader) hd1p16(rf_nv) sz:3145728 bsz:512 ref:3 sub:1
+(bootloader) hd1p17(cust_nv) sz:3145728 bsz:512 ref:3 sub:1
+(bootloader) hd1p18(modemst1) sz:1572864 bsz:512 ref:3 sub:1
+(bootloader) hd1p19(modemst2) sz:1572864 bsz:512 ref:3 sub:1
+(bootloader) hd1p20(fsg) sz:1572864 bsz:512 ref:3 sub:1
+(bootloader) hd1p21(fsc) sz:1024 bsz:512 ref:3 sub:1
+(bootloader) hd1p22(sec) sz:131072 bsz:512 ref:3 sub:1
+(bootloader) hd1p23(ssd) sz:8192 bsz:512 ref:3 sub:1
+(bootloader) hd1p24(limits) sz:1024 bsz:512 ref:3 sub:1
+(bootloader) hd1p25(apdp) sz:262144 bsz:512 ref:3 sub:1
+(bootloader) hd1p26(msadp) sz:262144 bsz:512 ref:3 sub:1
+(bootloader) hd1p27(dpo) sz:1024 bsz:512 ref:3 sub:1
+(bootloader) hd1p28(sdi) sz:98304 bsz:512 ref:3 sub:1
+(bootloader) hd1p29(keystore) sz:524288 bsz:512 ref:3 sub:1
+(bootloader) hd1p30(devinfo) sz:1024 bsz:512 ref:3 sub:1
+(bootloader) hd1p31(config) sz:524288 bsz:512 ref:3 sub:1
+(bootloader) hd1p32(bluetooth) sz:1048576 bsz:512 ref:3 sub:1
+(bootloader) hd1p33(misc) sz:1048576 bsz:512 ref:3 sub:1
+(bootloader) hd1p34(securefs) sz:8388608 bsz:512 ref:3 sub:1
+(bootloader) hd1p35(sutinfo) sz:1024 bsz:512 ref:3 sub:1
+(bootloader) hd1p36(systeminfo) sz:65536 bsz:512 ref:3 sub:1
+(bootloader) hd1p37(splash) sz:7549952 bsz:512 ref:3 sub:1
+(bootloader) hd1p38(splash2) sz:7549952 bsz:512 ref:3 sub:1
+(bootloader) hd1p39(box) sz:8388608 bsz:512 ref:3 sub:1
+(bootloader) hd1p40(keymaster) sz:262144 bsz:512 ref:3 sub:1
+(bootloader) hd1p41(cmnlib) sz:262144 bsz:512 ref:3 sub:1
+(bootloader) hd1p42(ftmboot) sz:41943040 bsz:512 ref:3 sub:1
+(bootloader) hd1p43(ftmdata) sz:41943040 bsz:512 ref:3 sub:1
+(bootloader) hd1p44(boot) sz:41943040 bsz:512 ref:3 sub:1
+(bootloader) hd1p45(recovery) sz:41943040 bsz:512 ref:3 sub:1
+(bootloader) hd1p46(modem) sz:89128960 bsz:512 ref:3 sub:1
+(bootloader) hd1p47(persist) sz:33554432 bsz:512 ref:3 sub:1
+(bootloader) hd1p48(hidden) sz:33554432 bsz:512 ref:3 sub:1
+(bootloader) hd1p49(cda) sz:8388608 bsz:512 ref:3 sub:1
+(bootloader) hd1p50(system) sz:3221225472 bsz:512 ref:3 sub:1
+(bootloader) hd1p51(cache) sz:268435456 bsz:512 ref:3 sub:1
+(bootloader) hd1p52(userdata) sz:27258764800 bsz:512 ref:3 sub:1
+OKAY [  0.556s]
+finished. total time: 0.556s
+root@robin:~/Desktop# fastboot -i 0x2c3f oem findbootimages
+...
+(bootloader) found ELF64 image on pmic
+(bootloader) 	Entry: 0x00000000fc10a090
+(bootloader) found ELF64 image on pmicbak
+(bootloader) 	Entry: 0x00000000fc10a090
+(bootloader) found QCOM SBL1 image on sbl1
+(bootloader) 	Image: src:00000050 dst:fec04000 sz:000778a0
+(bootloader) 	Signature: src:fec79fa0 sz:00000100
+(bootloader) 	CERT chain: src:fec7a0a0 sz:00001800
+(bootloader) 	code size: 00075fa0
+(bootloader) 	OEM root cert: sel:00000001 num:00000001
+(bootloader) found QCOM SBL1 image on sbl1bak
+(bootloader) 	Image: src:00000050 dst:fec04000 sz:000778a0
+(bootloader) 	Signature: src:fec79fa0 sz:00000100
+(bootloader) 	CERT chain: src:fec7a0a0 sz:00001800
+(bootloader) 	code size: 00075fa0
+(bootloader) 	OEM root cert: sel:00000001 num:00000001
+(bootloader) found ELF32 image on aboot
+(bootloader) 	Entry: 0x0f900000
+(bootloader) found ELF32 image on abootbak
+(bootloader) 	Entry: 0x0f900000
+(bootloader) found ELF32 image on rpm
+(bootloader) 	Entry: 0x00100091
+(bootloader) found ELF32 image on rpmbak
+(bootloader) 	Entry: 0x00100091
+(bootloader) found ELF64 image on tz
+(bootloader) 	Entry: 0x0000000006d96080
+(bootloader) found ELF64 image on tzbak
+(bootloader) 	Entry: 0x0000000006d96080
+(bootloader) found ELF64 image on hyp
+(bootloader) 	Entry: 0x0000000006c00000
+(bootloader) found ELF64 image on hypbak
+(bootloader) 	Entry: 0x0000000006c00000
+(bootloader) found QCOM MBN image on modemst1
+(bootloader) 	ID:16(ramfs1) version:3
+(bootloader) 	Image: src:000001d8 dst:c2612b18 sz:0017fe00
+(bootloader) 	Signature: src:c2792918 sz:00000000
+(bootloader) 	CERT chain: src:c2792918 sz:00000000
+(bootloader) 	code size: 0017fe00
+(bootloader) found QCOM MBN image on modemst2
+(bootloader) 	ID:17(ramfs2) version:3
+(bootloader) 	Image: src:000001d8 dst:fc4c0200 sz:0017fe00
+(bootloader) 	Signature: src:fc640000 sz:00000000
+(bootloader) 	CERT chain: src:fc640000 sz:00000000
+(bootloader) 	code size: 0017fe00
+(bootloader) found ELF64 image on sdi
+(bootloader) 	Entry: 0x00000000fe800000
+(bootloader) found ELF32 image on keymaster
+(bootloader) 	Entry: 0x00000000
+(bootloader) found ELF32 image on cmnlib
+(bootloader) 	Entry: 0x00000000
+(bootloader) found Android image on boot
+(bootloader) 	Kernel: addr:00008000 sz:009a791b
+(bootloader) 	Ramdisk: addr:01000000 sz:001a94d8
+(bootloader) 	Second: addr:00f00000 sz:00000000
+(bootloader) 	Tags Addr:00000100, DTB sz:00000000
+(bootloader) 	pagesize:4096
+(bootloader) found Android image on recovery
+(bootloader) 	Kernel: addr:00008000 sz:009e9176
+(bootloader) 	Ramdisk: addr:01000000 sz:00624ffa
+(bootloader) 	Second: addr:00f00000 sz:00000000
+(bootloader) 	Tags Addr:00000100, DTB sz:00000000
+(bootloader) 	pagesize:4096
+OKAY [  0.651s]
+finished. total time: 0.651s
+root@robin:~/Desktop# oem fbconfig
+No command 'oem' found, did you mean:
+ Command 'sem' from package 'parallel' (universe)
+ Command 'gem' from package 'ruby' (main)
+ Command 'om' from package 'omhacks' (universe)
+ Command 'rem' from package 'remind' (universe)
+ Command 'zoem' from package 'zoem' (universe)
+ Command 'eom' from package 'eom' (universe)
+oem: command not found
+root@robin:~/Desktop# fastboot -i 0x2c3f oem fbconfig
+...
+(bootloader) fbcon_config:
+(bootloader) 	base: 0x3400000 (end: 0x43d2000)
+(bootloader) 	width: 1080
+(bootloader) 	height: 1920
+(bootloader) 	stride: 1080
+(bootloader) 	bpp: 24
+(bootloader) 	format: 3
+(bootloader) 	update_start: 0xf92108c
+(bootloader) 	update_done: 0x0
+OKAY [  0.114s]
+finished. total time: 0.114s
+root@robin:~/Desktop# fastboot -i 0x2c3f oem ram-ptable
+...
+(bootloader) ID	Address                              	  Size	Attr	Cat	Do
+(bootloader) main	Type	Parts
+
+(bootloader) 0:	0x0000000000000000-0x0000000060000000	   1GB	rw	sdram	de
+(bootloader) fault	sys	8
+
+(bootloader) 1:	0x0000000080000000-0x00000000e0000000	   1GB	rw	sdram	de
+(bootloader) fault	sys	8
+
+(bootloader) 2:	0x00000000fc100000-0x00000000fc128000	 160kB	rw	iram	def
+(bootloader) ault	sys	0
+
+(bootloader) 3:	0x00000000fe800000-0x00000000fe810000	  64kB	rw	imem	def
+(bootloader) ault	sys	0
+
+(bootloader) 4:	0x0000000006f00000-0x0000000007080000	   1MB	rw	sdram	de
+(bootloader) fault	boot1	0
+
+OKAY [  0.167s]
+finished. total time: 0.167s
